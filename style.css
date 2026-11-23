@@ -79,8 +79,12 @@ h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.2; }
 .ranks img { display: block; width: 52px; height: 52px; }
 .ranks-label { margin: 0 0 6px; color: var(--muted); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 
-.card { margin-top: 20px; background: var(--panel); border: 2px solid var(--line); border-radius: 16px; padding: 22px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; margin-top: 20px; }
+.card { background: var(--panel); border: 2px solid var(--line); border-radius: 16px; padding: 22px; }
+.feature + .feature { margin-top: 20px; }
 .card p { margin: 0; color: var(--muted); }
+.btn { display: inline-block; margin-top: 14px; padding: 8px 18px; border-radius: 999px; background: var(--pink); color: #fff; font-weight: 800; text-decoration: none; }
+.btn:hover { background: var(--yellow); color: var(--bg); }
 
 /* gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
@@ -100,6 +104,7 @@ h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.2; }
 .about { display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 24px 36px; }
 .about img { display: block; width: 200px; height: 200px; border-radius: 24px; border: 3px solid var(--orange); }
 .about p { max-width: 38em; margin: 0 0 12px; color: var(--muted); }
+.about strong { color: var(--yellow); }
 @media (max-width: 640px) { .about { grid-template-columns: 1fr; } .about img { width: 140px; height: 140px; } }
 
 /* policy pages */
