@@ -49,19 +49,12 @@ img { max-width: 100%; height: auto; }
 .site-header nav a { color: var(--text); text-decoration: none; }
 .site-header nav a:hover { color: var(--yellow); }
 
-/* hero: the lockup sits on a field of pink dots */
+/* hero: headline on a field of pink dots */
 .hero { position: relative; overflow: hidden; background: var(--bg); }
 .hero::before { content: ""; position: absolute; top: -20%; right: -8%; width: 62%; height: 140%; background: var(--dots-pink) 0 0 / 12px 12px; -webkit-mask-image: radial-gradient(closest-side, #000 25%, transparent 100%); mask-image: radial-gradient(closest-side, #000 25%, transparent 100%); }
-.hero .wrap { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 24px 40px; padding-block: clamp(32px, 6vw, 72px); }
-.eyebrow { margin: 0 0 8px; color: var(--orange); font-weight: 800; font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; }
-.hero h1 { margin: 0 0 16px; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; text-shadow: 4px 4px 0 var(--pink); }
-.hero p { margin: 0; max-width: 32em; color: var(--muted); font-size: clamp(1.05rem, 2.4vw, 1.25rem); }
-.hero img { display: block; width: 100%; max-width: 460px; margin-inline: auto; border-radius: 8px; }
-
-@media (max-width: 760px) {
-  .hero .wrap { grid-template-columns: 1fr; }
-  .hero img { max-width: 340px; }
-}
+.hero .wrap { position: relative; padding-block: clamp(48px, 9vw, 112px); }
+.hero h1 { max-width: 14em; margin: 0 0 16px; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; text-shadow: 4px 4px 0 var(--pink); }
+.hero p { margin: 0; max-width: 40em; color: var(--muted); font-size: clamp(1.05rem, 2.4vw, 1.25rem); }
 
 /* sections */
 section { padding-block: clamp(36px, 6vw, 64px); }
@@ -74,6 +67,8 @@ h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.2; }
 
 .tag { display: inline-block; margin-bottom: 10px; padding: 3px 10px; border-radius: 3px; background: var(--cyan); color: #14111f; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
 .tag.soon { background: var(--orange); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tags .tag { margin-bottom: 0; }
 
 /* games: each card has a dotted plate printed off register behind it */
 .feature { position: relative; display: grid; grid-template-columns: 1.3fr 1fr; background: var(--panel); border-radius: 6px; }
